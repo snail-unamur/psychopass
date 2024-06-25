@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>File</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Prism-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/prism.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navigation">
+            <a href="#">All</a>
+            <a href="../index.html">My</a>
+            <a href="#">Projects</a>
+        </div>
+
+        <h1>Change-set #1</h1>
+
+        <h2 id="armc">./arm.c</h2>
+        <div class="row">
+            <div class="col-sm">
+                <div class="diff-modified diff" style="top:16em;height:1.5em"></div>
+                <pre style="background:rgba(228, 227, 216, 0.529);margin-top:-1.5em;"><code class="language-clike">#include&lt;stdio.h&gt;
+
+int main()
+{
+    // example1
+    int n,sum,i,t,a;
+    printf(&quot;\n\n\nThe Armstrong numbers in between 1 to 500 are : \n\n\n&quot;);
+
+    for(i = 1; i &lt;= 500; i++)
+    {
+        t = i;
+        sum = 0;
+        while(t != 0)
+        {
+            a = t%10;
+            sum += a*a*a;
+            t = t/10;
+        }
+
+        if(sum == i)
+        printf(&quot;\n\t\t\t%d&quot;, i);
+    }
+}</code></pre>
+            </div>
+            <div class="col-sm">
+                <div class="diff-new diff" style="top:16em;height:1.5em"></div>
+                <pre style="background:rgba(228, 227, 216, 0.529);margin-top:-1.5em;"><code class="language-clike">#include&lt;stdio.h&gt;
+
+int main()
+{
+    // example1
+    int n,sum,i,t,a;
+    printf(&quot;\n\n\nThe Armstrong numbers in between 1 to 500 are : \n\n\n&quot;);
+
+    for(i = 1; i &lt;= 500; i++)
+    {
+        t = i;  // as we need to retain the original number
+        sum = 0;
+        while(t != 0)
+        {
+            a = t%10;
+            sum += a*a*a;
+            t = t/10;
+        }
+
+        if(sum == i)
+        printf(&quot;\n\t\t\t%d&quot;, i);
+    }
+}</code></pre>
+            </div>
+        </div>
+
+        <h2 id="avgc">./avg.c</h2>
+        <div class="row">
+            <div class="col-sm">
+                <div class="diff-modified diff" style="top:8.5em;height:1.5em"></div>
+                <div class="diff-empty diff" style="top:10em;height:6em"></div>
+                <pre style="background:rgba(228, 227, 216, 0.529);margin-top:-7.5em;"><code class="language-clike">#include&lt;stdio.h&gt;
+
+int main()
+{
+    //example2
+    int n=5, i;
+    float sum = 0, x;
+
+
+
+
+    for(i = 0; i &lt; n; i++)
+    {
+        scanf(&quot;%f&quot;, &amp;x);
+        sum += x;
+    }
+    printf(&quot;\n\n\nAverage of the entered numbers is =  %f&quot;, (sum/n));
+    printf(&quot;\n\n\n\n\t\t\tCoding is Fun !\n\n\n&quot;);
+}</code></pre>
+            </div>
+
+            <div class="col-sm">
+                <div class="diff-new diff" style="top:8.5em;height:1.5em"></div>
+                <div class="diff-new diff" style="top:10em;height:6em"></div>
+                <input type="button" value="Comment" class="diff-btn" style="position:absolute;top:15.5em;right:20px;" data-toggle="collapse" data-target="#diff-comment" aria-expanded="false"/>
+                <pre style="background:rgba(228, 227, 216, 0.529);margin-top:-7.5em;"><code class="language-clike">#include&lt;stdio.h&gt;
+
+int main()
+{
+    //example2
+    int n, i;
+    float sum = 0, x;
+
+    printf(&quot;Enter number of elements:  &quot;);
+    scanf(&quot;%&quot;, n);
+    printf(&quot;\n\n\nEnter %d elements\n\n&quot;, n);
+    for(i = 0; i &lt; n; i++)
+    {
+        scanf(&quot;%f&quot;, &amp;x);
+        sum += x;
+    }
+    printf(&quot;\n\n\nAverage of the entered numbers is =  %f&quot;, (sum/n));
+    printf(&quot;\n\n\n\n\t\t\tCoding is Fun !\n\n\n&quot;);
+}</code></pre>
+
+                <div id="diff-comment" class="collapse" style="position:absolute;top:17.5em;width:90%;z-index:999">
+                    <form id="myform">
+                        <textarea name="comment" placeholder="Give some constructive feedback" id="comment-txt" style="width: 100%;height:50px;"></textarea>
+                        <div class="row">
+                            <div class="col-sm">
+                                <input id="search-solution" /
+                                    placeholder="Add a quick solution from Google, YouTube, Stackoverflow, Code Project, ..."
+                                    style="width: 100%; ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col" id="solution-container">
+                            </div>
+                        </div>
+                        <input type="submit" value="Save comment" id="submit-only" />
+                        <label><input type="checkbox" id="expertYN" autocomplete="off" /> require expert's opinion</label>
+                        <select id="expertSelect" style="display:none">
+                            <option value="Franz Becker">Franz Becker</option>
+                            <option value="Herbert Müller">Herbert Müller</option>
+                            <option value="Maria Süter">Maria Süter</option>
+                            <option value="Albrecht Rahm">Albrecht Rahm</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="sats">./slot-allocation.dto.ts</h2>
+        <div class="row">
+            <div class="col-sm">
+                <div class="diff-modified diff" style="top:1em;height:1.5em"></div>
+                <div class="diff-modified diff" style="top:13em;height:1.5em"></div>
+                <pre style="background:rgba(228, 227, 216, 0.529);margin-top:-3em;"><code class="language-js">import {SlotAllocationStatusDto} from &quot;./slot-allocation-status.dto&quot;;
+import {ScrDto} from &quot;../scr/scr.dto&quot;;
+import {RunwayDto} from &quot;./runway.dto&quot;;
+import {StandDto} from &quot;./stand.dto&quot;;
+export class SlotAllocationDto {
+    constructor(
+        public id: number,
+        public allocationStart: Date,
+        public allocationEnd: Date,
+        public status: SlotAllocationStatusDto,
+        public scrRequestOrReply: ScrDto,
+        public expectedRunway: RunwayDto,
+        public expectedStand: StandDto
+    ) {
+    }
+}</code></pre>
+            </div>
+
+            <div class="col-sm">
+                <div class="diff-empty diff" style="top:1em;height:1.5em"></div>
+                <div class="diff-new diff" style="top:13em;height:1.5em"></div>
+                <pre style="background:rgba(228, 227, 216, 0.529);margin-top:-3em;"><code class="language-js">
+import {ScrDto} from &quot;../scr/scr.dto&quot;;
+import {RunwayDto} from &quot;./runway.dto&quot;;
+import {StandDto} from &quot;./stand.dto&quot;;
+export class SlotAllocationDto {
+    constructor(
+        public id: number,
+        public allocationStart: Date,
+        public allocationEnd: Date,
+        public isConfirmed: boolean,
+        public scrRequestOrReply: ScrDto,
+        public expectedRunway: RunwayDto,
+        public expectedStand: StandDto
+    ) {
+    }
+} </code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Comments</h1>
+                <div style="height:200px;overflow-y:scroll">
+                    <table border="1" style="width: 100%;" id="comment-list">
+                        <tr><th>Section</th><th style="width:80%">Comments</th><th>Expert</th></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h1>Overall comment</h1>
+                <div><textarea style="width:100%"></textarea></div>
+                <a href="./change.html" class="btn btn-primary">Save review</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#myform").submit(function(e){
+            e.preventDefault();
+            var expertSelect = $(this).find("select").val();
+            var expertYN = $("#expertYN").is(":checked");
+            $("#diff-comment").collapse("hide");
+            $("#comment-list").append($('<tr>')
+                              .append($('<td>').text("line 28-30"))
+                              .append($('<td>').text($(this).find("#comment-txt").val()))
+                              .append($('<td>').text(expertYN?expertSelect:"")));
+            return false;
+        });
+
+        var solutions = [
+            {
+                link: "https://faq.cprogramming.com/cgi-bin/smartfaq.cgi?answer=1043372399&id=1043284385",
+                logo: "./sites/cprog.png",
+                description: "How do I get a number from the user (C)",
+                hasImage: false,
+                text: "int i;\nprintf (&quot;Enter a number?&quot;);\nnum = getchar();\nnum -= '0';"
+            },
+            {
+                link: "https://www.youtube.com/watch?v=hSHFjPvqFjw",
+                logo: "./sites/yt.png",
+                description: "C Programming Tutorial - 11 - Getting Input with scanf",
+                hasImage: true,
+                img: "./sites/video-thumb.jpg"
+            },
+            {
+                link:"https://stackoverflow.com/questions/26583717/how-to-scanf-only-integer",
+                logo:"./sites/sovf.png",
+                description:"How to scanf only integer?",
+                hasImage: false,
+                text: "-    You take scanf().\n-    You throw it in the bin.\n-    You use fgets() to get an entire line.\n-    You use strtol() to parse the line as an integer, checking if it consumed the entire line."
+            }
+        ];
+
+        function makeSolution(s){
+            var solution = $("<div>").addClass("row solution");
+                solution.append($("<div>").addClass("col-2")
+                                          .append($("<a>").attr("href",s.link)
+                                                          .attr("target", "_blank")
+                                                          .append($("<img>").attr("src",s.logo))));
+                solution.append($("<div>").addClass("col")
+                                          .append($("<a>").text(s.description).attr("href",s.link))
+                                          .append($("<button>").addClass("btn").text("Select solution").on("click", (e)=> selSolution(e,s)))
+                                          .append($("<div>").addClass("preview")));
+                if(s.hasImage){
+                    solution.find(".preview").append($("<img>").attr("src", s.img));
+                }
+                else{
+                    solution.find(".preview").append($("<pre>").append($("<code>").html(s.text)));
+                }
+            return solution;
+        }
+        
+        $("#search-solution").on("keyup", function(e){
+            var solutions12 = solutions.slice().concat(solutions.slice()).concat(solutions.slice()).concat(solutions.slice());
+
+            var charCount = $("#search-solution").val().length;
+            var ss = [];
+            if(charCount < 1) ss = [];
+            else if(charCount < 3) ss = solutions12;
+            else if(charCount < 5) ss = solutions12.slice(0, 10-charCount);
+            else if(charCount < 15) ss = solutions12.slice(0, 2);
+            else ss = [];
+
+            $("#solution-container").empty();
+            for(s of ss){
+                $("#solution-container").append(makeSolution(s)).append("<hr/>");
+            }
+        });
+
+        function selSolution(e,s){
+            $("#solution-container").empty();
+            var solution = makeSolution(s);
+            solution.find("button").remove();
+            $("#solution-container").append(solution).append("<hr/>");
+            e.preventDefault();
+        }
+
+        $("#expertYN").change(function() {
+            $("#expertSelect").toggle();
+        });
+    </script>
+
+</body>
+</html>

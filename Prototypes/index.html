@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Overview</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <style>
+        .navigation a {
+            border:solid 1px;
+        }
+        .status-open{
+            background:orange;
+        }
+        .status-merged {
+            background-color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="#">All</a>
+            <a href="#">My</a>
+            <a href="#">Projects</a>
+        </div>
+        <div class="">
+            <a href="#">Open</a><span>
+            <a href="#">Merged</a>
+            <a href="#">Abandoned</a>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <table border="1" style="width:100%">
+                    <tr><th>id</th><th>subject</th><th>owner</th><th>project</th><th>status</th></tr>
+                    <tr><td>0</td><td><a href="base/change.html">basic code review features</a></td><td>Albert</td><td></td><td class="status-merged">merged</td></tr>
+                    <tr><td>1</td><td><a href="technique1-advice/change.html">advice to make constructive comments</a></td><td>Albert</td><td>Confirmation bias</td><td class="status-open">open</td></tr>
+                    <tr><td>2</td><td><a href="technique2-assistant/change.html">assist comment creation and review comment</a></td><td>Franz</td><td>Confirmation bias</td><td class="status-open">open</td></tr>
+                    <tr><td>5</td><td><a href="technique3-guide/change.html">guide the reviewer through complicated changes</a></td><td>Franz</td><td>Decision fatigue</td><td class="status-open">open</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
