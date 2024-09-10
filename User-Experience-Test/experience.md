@@ -51,9 +51,9 @@ In addition to the UEQ, we asked the participants the following open-ended quest
 
 - P1: Software engineer for many years. Has worked for many companies already. He is experienced in code reviews, but only peer-review side by side. He has no experience with tool-based code reviews (modern code reviews).
 - P2: Worked in a company. Has already used a diff-tool; not the same as Github, but the concept is the same. He knows Github, but not Gerrit.
-- P3:Thibault: Worked in companies. Has already used a diff-tool, like with Github; but mainly worked in the position as author, not as reviewer.
+- P3: Worked in companies. Has already used a diff-tool, like with Github; but mainly worked in the position as author, not as reviewer.
 - P4: Professional experience with Github using Pull requests and making comments. As well as verifying that projects respect conventions and formalisms.
- Short professional experience with Github, being reviewed and as in position as reviewer. Familiar with diff-tool.
+- P5: Short professional experience with Github, being reviewed and as in position as reviewer. Familiar with diff-tool.
 
 ## User Experience Questionnaire (UEQ)
 
