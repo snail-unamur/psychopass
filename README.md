@@ -1,5 +1,7 @@
 # Towards debiasing code review support replication package
 
+[![DOI](https://zenodo.org/badge/819802055.svg)](https://doi.org/10.5281/zenodo.14803012)
+
 This repository contains the replication package for the paper *Towards debiasing code review support*.
 
 - [User-Experience-Test/](/User-Experience-Test) contains the detailed evaluation plan and results of the final *User Experience Test* with the description of the participants, qualitative, and quantitative data. See [experience.md](/User-Experience-Test/experience.md) for more details.
